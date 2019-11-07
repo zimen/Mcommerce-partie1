@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "e1ec669a-985c-4e27-8e2e-3e7bc7d54252",
+		"name": "Partie 4 - Test des méthodes créées",
+		"description": "Test des méthodes créer lors du tutoriel d'OpenClassroom sur les microservices avec spring boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test calculerMargeProduit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/AdminProduits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"AdminProduits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test trierProduitsParOrdreAlphabetique",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/TrierProduits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"TrierProduits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Validation Prix de vente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nom\":\"didierProduit\",\n\t\"prix\":0,\n\t\"prixAchat\":1500\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/Produits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Produits"
+					]
+				},
+				"description": "Teste la validation du prix de vente à la création du produit"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
