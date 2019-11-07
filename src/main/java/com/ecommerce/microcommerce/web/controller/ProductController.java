@@ -116,5 +116,10 @@ public class ProductController {
         return result;
     }
 
+    //Methode Calculer marge produit
+    @GetMapping(value = "/TrierProduits")
+    public List<Product> trierProduitsParOrdreAlphabetique() {        
+        return productDao.findAllByOrderByNomAsc();
+    }
 
 }
